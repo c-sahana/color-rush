@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #fffbe6;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 12px;
+  color: #666;
+  padding: 10px 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  width: 150px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcb05;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #f4b400;
+  transform: scale(1.05);
+}
+
+.about-container,
+.scoreboard {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.about-container p {
+  margin: 15px 0;
+}
+
+.game-area {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.circle:active {
+  transform: scale(1.2);
+}
+
+.summary-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  display: none;
+}
+
+.summary-popup.visible {
+  display: block;
+}
+
+.color-box {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-color: lightgray; /* ✅ Placeholder before game starts */
+}
+
+#colorName {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}

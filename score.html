@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Catch - Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scoreboard">
+      <h1>🏆 Top 5 Scores</h1>
+      <ol id="leaderboard"></ol>
+      <button onclick="location.href='index.html'">Back to Home</button>
+    </div>
+    <footer>© 2025 Color Catch | Created by Sahana</footer>
+    <script>
+      const leaderboard = JSON.parse(
+        localStorage.getItem("leaderboard") || "[]"
+      );
+      leaderboard.sort((a, b) => b.score - a.score);
+
+      document.getElementById("leaderboard").innerHTML = leaderboard
+        .slice(0, 5)
+        .map((entry, index) => `<li>${entry.name}: ${entry.score}</li>`)
+        .join("");
+    </script>
+  </body>
+</html>

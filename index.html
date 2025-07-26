@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Catch - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home-container">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <h1>🎨 Welcome to Color Catch!</h1>
+      <div class="button-row">
+        <button onclick="askNameAndStart()">Start Game</button>
+        <button onclick="location.href='score.html'">Scoreboard</button>
+        <button onclick="location.href='about.html'">About</button>
+      </div>
+    </div>
+    <footer>© 2025 Color Catch | Created by Sahana</footer>
+    <script>
+      function askNameAndStart() {
+        let playerName = prompt("Enter your name:");
+        if (!playerName || playerName.trim() === "") {
+          playerName = "Player";
+        }
+        localStorage.setItem("playerName", playerName);
+        window.location.href = "game.html";
+      }
+    </script>
+  </body>
+</html>

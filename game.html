@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Catch - Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="top-bar">
+        <br /><br /><br />
+        <h1>
+          <div>Time Left: <span id="timer">30</span>s</div>
+        </h1>
+        <div>Score: <span id="score">0</span></div>
+        <button id="exitBtn">Exit</button>
+      </div>
+
+      <div class="target-box">
+        🎯 Find this color:
+        <br />
+        <div id="targetColor" class="color-box"></div>
+        <span id="colorName"></span>
+        <!-- ✅ NEW: Shows color name -->
+      </div>
+
+      <div id="gameArea" class="game-area"></div>
+    </div>
+
+    <div id="gameOverSummary" class="summary-popup hidden"></div>
+    <footer>© 2025 Color Catch | Created by Sahana</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
